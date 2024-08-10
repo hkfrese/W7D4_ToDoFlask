@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Todo</title>
+</head>
+<body>
+    <h1>Edit Todo</h1>
+    <form action="{{ url_for('edit_todo', id=todo.id) }}" method="POST">
+        <input type="text" name="content" value="{{ todo.content }}">
+        <button type="submit">Save</button>
+    </form>
+    <a href="{{ url_for('show_todos') }}">Back to Todos</a>
+</body>
+</html>
